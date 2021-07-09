@@ -1,0 +1,239 @@
+<template>
+    <div class="loginPage">
+    <div class="form">
+      <h2>انشاء حساب جديد </h2>
+      <form @submit.prevent="login">
+        <div class="form-group text-right">
+            <label for="exampleInputEmail1">الاسم الثلاثي للباحث</label>
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              aria-describedby="emailHelp"
+              v-model="text"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+          <div class="form-group text-right">
+            <label for="exampleInputEmail1">البريد الالكتروني</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              v-model="email"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+          <div class="form-group text-right">
+            <label for="exampleInputEmail1">كلمة المرور</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              aria-describedby="emailHelp"
+              v-model="password"
+              placeholder="Your answer"
+            />
+          </div>
+          <div class="form-group text-right">
+            <label for="exampleInputEmail1">الجامعة</label>
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              aria-describedby="emailHelp"
+              v-model="text"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+          <div class="form-group text-right">
+            <label for="exampleInputEmail1">الكلية</label>
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              aria-describedby="emailHelp"
+              v-model="text"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+          <div class="form-group text-right">
+            <label for="exampleInputEmail1">القسم</label>
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              aria-describedby="emailHelp"
+              v-model="text"
+              placeholder="Your answer"
+              required
+            />
+          </div>
+          <div class="form-group text-right">
+            <div class="ss1">
+            <label for="exampleInputEmail1">اللقب العلمي ان وجد</label>
+            <select class="form-control form-control-lg" required>
+              <option>استاذ</option>
+              <option>استاذ مساعد</option>  
+              <option>مدرس</option>
+              <option>مدرس مساعد</option>  
+              <option>اخرى</option>  
+              </select>
+            </div>
+          </div>
+          <div class="form-group text-right">
+           <div class="ss1">
+          <label for="exampleInputEmail1">نوع المعاملة</label>
+          <select class="form-control form-control-lg" required>
+            <option>ترقية علمية</option>
+            <option>طالب دراسات عليا</option>  
+            <option>اخرى</option>  
+            </select>
+          </div>
+        </div>
+    <button
+    type="submit"
+    class="btn btn-success btn-block"><a href="new11login.html">تسجيل</a></button>
+  <br>
+</form>
+</div>
+    <div class="lotte">
+     
+      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_CgL682.json"  background="transparent"  speed="1"  style="width: 600px; height: 500px;"  loop  autoplay></lottie-player>
+    </div>
+  </div>
+</template>
+<style scoped>
+
+.loginPage {
+    display: flex;
+    direction: rtl;
+    justify-content: space-around;
+    margin: 10px;
+    min-height: 700px;
+  }
+  option{
+    font-size: 15px;
+  }
+  .loginPage .form {
+    margin-top: 0;
+    margin-right: 50px;
+    width: 30%;
+    height: 300px;
+    padding: 20px;
+  }
+  .loginPage .form h2 {
+    text-align: center;
+    padding: 15px;
+  }
+  label{font-size: 16px;}
+  .loginPage .form .btn {
+    outline: none;
+    transition: all .8s ease-in-out;
+    font-size: 20px;
+    width: 285px;
+    margin: 40px 20px 0 0;
+   
+  }
+  .loginPage .form .btn:hover{
+      border-radius: 30px;
+    transition: all .4s ease-in-out;
+    border: 1px solid #000;
+  }
+  .loginPage .form .btn a{
+    outline: none;
+    transition: all .8s ease-in-out;
+    font-size: 20px;
+    width: 313px;
+    margin: 88px 20px 0 0;
+    color: #fff;
+    text-decoration: none;
+  }
+  .loginPage .lotte {
+      margin-top:100px;
+    width: 50%;
+    padding: 15px;
+  }
+  .loginPage .lotte img {
+    position: fixed;
+    margin: -75px -719px 0 0;
+    width: 59%;
+  }
+  .loginPage .form-group{
+      margin-top: 25px;
+  }
+  .form-control{
+      transition: all  .8s ease-in-out;
+
+  }
+  .form-group .ss1{
+    margin: 0 0 0 0;
+    transition: all .6s ease-in-out;
+}
+.form-group .ss1:hover{
+  transition: all .6s ease-in-out;
+  margin: 0 0 100px 0;
+}
+  .form-control:hover{
+    transition: all .4s ease-in-out;
+    border: 1px solid #000;
+  }
+  .loding-overlay{
+    background: #ff783d;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    }
+    
+    .spinner {
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        
+        margin: 100px auto;
+        -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+        animation: sk-rotateplane 1.2s infinite ease-in-out;
+      }
+      @-webkit-keyframes sk-rotateplane {
+        0% { -webkit-transform: perspective(120px) }
+        50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+        100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+      }
+      
+      @keyframes sk-rotateplane {
+        0% { 
+          transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+          -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+        } 50% { 
+          transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+          -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+        } 100% { 
+          transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+          -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        }
+      }
+      #scoll-top{
+        width: 50px;
+        height: 40px;
+        background-color: #272727;
+   color: #ddd;
+   text-align: center;
+   position: fixed;
+   bottom: 10px;
+   right: 15px;
+   z-index: 9999;
+   display: none;
+    }
+   #scoll-top:hover{
+     background-color: #444;
+   }
+</style>
