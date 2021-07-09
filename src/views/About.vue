@@ -62,6 +62,7 @@ export default ({
     margin: 10px;
     min-height: 700px;
   }
+ 
   option{
     font-size: 15px;
   }
